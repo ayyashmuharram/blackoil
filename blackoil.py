@@ -143,13 +143,13 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-st.markdown("Informasi tentang negara tersebut")
+#st.markdown("Informasi tentang negara tersebut")
 
 produksi_berdasarkan_negara_dibalik = (
     df_selection.groupby(by=["kode_negara"]).sum()[["produksi"]].sort_values(by="produksi",ascending=[0]) 
 )
 
-st.markdown("Apabila anda hanya ingin menampilkan Negara yang terkecil produksinya sesuai yang anda mau silahkan gunakan tools plotly dibawah dengan meng-zoomnya dan menggunakan 'pan'")
+#st.markdown("Apabila anda hanya ingin menampilkan Negara yang terkecil produksinya sesuai yang anda mau silahkan gunakan tools plotly dibawah dengan meng-zoomnya dan menggunakan 'pan'")
 
 fig_produksi_negara_dibalik = px.bar(
     produksi_berdasarkan_negara_dibalik,
